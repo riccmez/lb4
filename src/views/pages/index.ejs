@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body style="height: 100%; width: 100vw; background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);background-repeat: no-repeat;
+    background-attachment: fixed;">
+    <center><h1>Productos</h1></center>
+    <br>
+    <br>
+    <div>
+      <h4><a href="/create">Añadir producto</a></h4>
+        <table class="table caption-top">
+            <thead class="table" >
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Code</th>
+                <th scope="col">Description</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Categoria</th>
+                <!-- <th scope="col">Fecha produccion</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <% for(var i=0; i<productos.length; i++) {%>
+                <tr>
+                  <th scope="row"><%-i+1%></th>
+                  <td><a href="/show/<%=productos[i]._id%>"><%- productos[i].codigo %></a></td>
+                  <td><%- productos[i].descripcion %></td>
+                  <td><%- productos[i].precio %></td>
+                  <td><%- productos[i].stock %></td>
+                  <td><%- productos[i].marca %></td>
+                  <td><%- productos[i].categoria %></td>
+                  <!-- <td><%- productos[i].fecha_produccion %></td> -->
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+
+    </div>
+  </body>
+</html>

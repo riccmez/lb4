@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crear Producto</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/">Lista de Productos</a></h3>
+            <h1>Crear Producto</h1>
+                <table style="font-family:sans-serif">
+                    <tbody>
+                        <tr>
+                            <td>codigo</td>
+                            <td><input type="text" id="codigo"/></td>
+                        </tr>
+                        <tr>
+                            <td>Descripcion</td>
+                            <td><input  type="text"  id="descripcion" /></td>
+                        </tr>
+                        <tr>
+                            <td>Precio</td>
+                            <td><input type="text" id="precio" /></td>
+                        </tr>
+                        <tr>
+                            <td>Stock</td>
+                            <td><input type="text" id="stock" /></td>
+                        </tr>
+                        <tr>
+                            <td>Marca</td>
+                            <td><input type="text" id="marca" /></td>
+                        </tr>
+                        <tr>
+                            <td>Categoria</td>
+                            <td><input type="text" id="categoria"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button id="btn">Grabar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+    <script>
+        let btn = document.getElementById('btn');
+        btn.onclick = function(){
+            let cdg = document.getElementById("codigo");
+            let des = document.getElementById("descripcion");
+            let pre = document.getElementById("precio");
+            let sto = document.getElementById("stock");
+            let mr = document.getElementById("marca");
+            let ct = document.getElementById("categoria");
+            window.location.href = `save/${cdg.value}/${des.value}/${pre.value}/${sto.value}/${mr.value}/${ct.value}`
+        }
+    </script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Editar Producto</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3><a href="/">Lista de Productos</a></h3>
+            <h1>Editar Productos</h1>
+                <table style="font-family:sans-serif">
+                    <tbody>
+                        <tr>
+                            <td>id</td>
+                            <td><label id="id"><%- producto._id %> </label></td>
+                        </tr>
+                        <tr>
+                            <td>codigo</td>
+                            <td><input type="text" id="codigo" value=<%- producto.codigo %> /></td>
+                        </tr>
+                        <tr>
+                            <td>Descripcion</td>
+                            <td><input  type="text"  id="descripcion" value=<%- producto.descripcion %> /></td>
+                        </tr>
+                        <tr>
+                            <td>Precio</td>
+                            <td><input type="text" id="precio" value=<%- producto.precio %> /></td>
+                        </tr>
+                        <tr>
+                            <td>Stock</td>
+                            <td><input type="text" id="stock" value=<%- producto.stock %> /></td>
+                        </tr>
+                        <tr>
+                            <td>Marca</td>
+                            <td><input type="text" id="marca" value=<%- producto.marca %> /></td>
+                        </tr>
+                        <tr>
+                            <td>Categoria</td>
+                            <td><input type="text" id="categoria" value=<%- producto.categoria %> /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button id="btn">Update</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+    <script>
+        let btn = document.getElementById('btn');
+        btn.onclick = function(){
+            let id = document.getElementById("id").innerText;
+            let cdg = document.getElementById("codigo");
+            let des = document.getElementById("descripcion");
+            let pre = document.getElementById("precio");
+            let sto = document.getElementById("stock");
+            let mr = document.getElementById("marca");
+            let ct = document.getElementById("categoria");
+            console.log(id);
+            window.location.href = `update/${id}/${cdg.value}/${des.value}/${pre.value}/${sto.value}/${mr.value}/${ct.value}`
+        }
+    </script>
+</html>

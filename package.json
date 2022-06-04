@@ -1,0 +1,23 @@
+{
+  "name": "web-template",
+  "version": "1.0.0",
+  "description": "this is a template",
+  "main": "config.js",
+  "scripts": {
+    "start": "node src index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Ricardo Carbajal Mezarina",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.3",
+    "jinja-js": "^0.1.8",
+    "mongoose": "^6.3.3",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

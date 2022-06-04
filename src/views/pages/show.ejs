@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Detalle de Producto</title>
+    </head>
+    <body>
+        <div>
+            <h3 style="font-family: sans-serif;"><a href="/">Lista de Productos</a></h3>
+            <h1 style="font-family: sans-serif;">Detalle de Producto</h1>
+            <table style="font-family: sans-serif;">
+                <tbody>
+                    <tr>
+                        <td>codigo</td>
+                        <td><%- producto.codigo %></td>
+                    </tr>
+                    <tr>
+                        <td>Descripcion</td>
+                        <td><%- producto.descripcion %></td>
+                    </tr>
+                    <tr>
+                        <td>Precio</td>
+                        <td><%- producto.precio %></td>
+                    </tr>
+                    <tr>
+                        <td>Stock</td>
+                        <td><%- producto.stock %></td>
+                    </tr>
+                    <tr>
+                        <td>Marca</td>
+                        <td><%- producto.marca%></td>
+                    </tr>
+                    <tr>
+                        <td>Categoria</td>
+                        <td><%- producto.categoria %></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 style="font-family:sans-serif"><a href="/edit/<%=producto._id%>">EDIT</a></h3>
+            <form action="/delete/<%=producto._id%>" method="post">
+                <button type="submit">DELETE</button>
+            </form>
+        </div>
+    </body>
+</html>
